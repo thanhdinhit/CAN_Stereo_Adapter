@@ -103,7 +103,8 @@ void Buttons::iterate() {
     this->timer = millis();
 
     for(uint8_t i = 0; i < Buttons::buttonCount; i++ ) {
-        if(!this->status[i]) continue;
+        if(!this->status[i]) 
+            continue;
 
         if(millis() - activation[i] > 150) {
             this->deactivate(i);
